@@ -1,0 +1,70 @@
+﻿/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #f3f5f9;
+}
+
+/* Main Content Styles */
+.main_content {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    font-size: 24px;
+    color: #4b4276;
+    margin-bottom: 20px;
+}
+
+.info {
+    color: #717171;
+    line-height: 25px;
+}
+
+/* Panel Styles */
+.message-panel {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #721c24;
+    border-radius: 4px;
+    color: #721c24;
+}
+
+/* Input Styles */
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+    /* Dropdown Styles */
+    .input select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+/* Button Styles */
+.button {
+    padding: 10px 20px;
+    background-color: #4b4276;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .button:hover {
+        background-color: #594f8d;
+    }
