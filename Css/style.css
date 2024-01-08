@@ -1,65 +1,61 @@
-﻿
-body, h1, h2, h3, p, ul, li {
+﻿/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.wrapper {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f3f5f9;
-    color: #333;
-}
-
-/* Wrapper Styles */
-.wrapper {
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* Menu Styles */
-.menu {
-    background-color: #333;
     overflow: hidden;
-}
-
-    .menu ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu li {
-        float: left;
-    }
-
-    .menu a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-        .menu a:hover {
-            background-color: #594f8d;
-        }
-
-/* Content Styles */
-.content {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-/* Footer Styles */
-.footer {
-    text-align: center;
-    padding: 10px;
     background-color: #333;
-    color: #fff;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    .menu a:hover {
+        background-color: #625693;
+    }
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .clear {
     clear: both;
 }
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add more styles based on your requirements */

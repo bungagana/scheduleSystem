@@ -6,12 +6,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
      <style>
         .main_content {
-            max-width: 100%;
+            max-width: 80%;
             margin: 0 auto;
             padding: 20px;
             background-color: #f4f4f4;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding-bottom:100px;
         }
 
         .header {

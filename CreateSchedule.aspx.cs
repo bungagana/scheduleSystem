@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 
 namespace Lab3
 {
@@ -14,19 +15,18 @@ namespace Lab3
         {
             if (!IsPostBack)
             {
-                // Populate job roles in the DropDownList from the database
                 PopulateDepartments();
+                PopulateCrewIDs();
             }
         }
 
         private void PopulateDepartments()
         {
-            // Use DbConnection class to get the SqlConnection
             using (SqlConnection connection = DbConnection.GetConnection())
             {
                 connection.Open();
 
-                string query = "SELECT DepartmentName FROM Departments"; // Adjust the query based on your actual table structure
+                string query = "SELECT DepartmentName FROM Departments"; 
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -35,7 +35,29 @@ namespace Lab3
                         while (reader.Read())
                         {
                             string departmentName = reader["DepartmentName"].ToString();
-                            ddlJobRoles.Items.Add(new System.Web.UI.WebControls.ListItem(departmentName, departmentName));
+                            ddlJobRoles.Items.Add(new ListItem(departmentName, departmentName));
+                        }
+                    }
+                }
+            }
+        }
+
+        private void PopulateCrewIDs()
+        {
+            using (SqlConnection connection = DbConnection.GetConnection())
+            {
+                connection.Open();
+
+                string query = "SELECT CrewID FROM Users"; 
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string crewID = reader["CrewID"].ToString();
+                            ddlCrewID.Items.Add(new ListItem(crewID, crewID));
                         }
                     }
                 }
@@ -46,18 +68,16 @@ namespace Lab3
         {
             try
             {
-                // Get values from the input controls
                 string fullName = txtFullName.Text;
-                string crewID = txtCrewID.Text;
+                string crewID = ddlCrewID.SelectedValue;
                 string jobRoles = ddlJobRoles.SelectedValue;
                 string dutyTime = txtDutyTime.Text;
-                string startTime = txtStartTime.Value; // Access value property
-                string endTime = txtEndTime.Value;     // Access value property
+                string startTime = txtStartTime.Value; 
+                string endTime = txtEndTime.Value;     
 
-                // Ensure startTime and endTime are valid time formats
+
                 if (TryParseTime(startTime, out TimeSpan startTimeSpan) && TryParseTime(endTime, out TimeSpan endTimeSpan))
                 {
-                    // Insert data into the database using DbConnection class
                     using (SqlConnection connection = DbConnection.GetConnection())
                     {
                         connection.Open();
@@ -78,26 +98,21 @@ namespace Lab3
                         }
                     }
 
-                  
                     Response.Redirect("Schedules.aspx");
                 }
                 else
                 {
-                    // Handle invalid time formats
                     pnlMessage.Visible = true;
                     lblErrorMessage.Text = "Invalid time format for StartTime or EndTime.";
                 }
             }
             catch (SqlException ex)
             {
-                // Display error message or log the exception
                 pnlMessage.Visible = true;
                 lblErrorMessage.Text = $"Error creating schedule: The Crew ID has already been used.";
             }
-
             catch (Exception ex)
             {
-                // Handle other exceptions
                 pnlMessage.Visible = true;
                 lblErrorMessage.Text = $"An error occurred: {ex.Message}";
             }

@@ -9,31 +9,121 @@
     </asp:ContentPlaceHolder>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="../Css/style.css" rel="stylesheet" type="text/css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var currentPage = window.location.pathname.split("/").pop();
+
+        var menuLinks = document.querySelectorAll(".menu a");
+        menuLinks.forEach(function (link) {
+            if (link.getAttribute("href") == currentPage) {
+                link.classList.add("active");
+            }
+        });
+    });
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .wrapper {
+            background-color: #333;
+            padding: 10px 0;
+            overflow: hidden; 
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: left; /* Float the main menu to the left */
+
+        }
+
+        .menu li {
+            float: left;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .menu a.active {
+            background-color: #625693;
+        }
+
+        .menu a:hover {
+            background-color: #625693;
+        }
+
+        .user-links {
+            float: right; /* Float the user links to the right */
+        }
+
+        .user-links a {
+            display: inline-block; /* Make the links appear in the same line */
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-            <div class="wrapper">
-             <div class="menu">
-                 <ul>
-                     <li><a href="Default.aspx">Home</a></li>
-                     <li><a href="Schedules.aspx">Schedules</a></li>
-                     <li><a href="Profile">Contact Us</a></li>
-                     <li><a href="Graph.aspx">Class</a></li>
-                     <li><a href="StudentInfo.aspx">Gallery</a></li>
-                     <li><a href="Default.aspx">Home</a></li>
-                 </ul>
-             </div>
+        <div class="wrapper">
+           <div id="menu" runat="server" class="menu">
+                <ul>
+                    <li><a href="Home.aspx">Home</a></li>
+                    <li><a href="Schedules.aspx">Schedules</a></li>
+                    <li><a href="Department.aspx">Department</a></li>
+                    <li><a href="connectingReport.aspx">Report</a></li>
+                </ul>
             </div>
-        <div class="clear></div>
-        <div class="content" >
+            <div class="user-links">
+                <a href="Profile.aspx"><i class="fas fa-user"></i> <%= Session["CrewID"] %></a>
+                <a href="Logout.aspx"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="content">
             <div>
                 <asp:ContentPlaceHolder ID="bodycontent" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
         </div>
         <div class="clear"></div>
-        <div class ="footer">
+        <div class="footer">
             <h2>Copyright@BIE33103 1-2023/2024</h2>
         </div>
     </form>

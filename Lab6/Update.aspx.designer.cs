@@ -11,70 +11,88 @@ namespace Lab3
 {
 
 
-    public partial class CreateSchedule
+    public partial class Update
     {
 
         /// <summary>
-        /// pnlMessage control.
+        /// txtbox_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlMessage;
+        protected global::System.Web.UI.WebControls.TextBox txtbox_name;
 
         /// <summary>
-        /// lblErrorMessage control.
+        /// rfvName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
 
         /// <summary>
-        /// txtFullName control.
+        /// txtbox_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFullName;
+        protected global::System.Web.UI.WebControls.TextBox txtbox_ID;
 
         /// <summary>
-        /// ddlCrewID control.
+        /// rfvID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCrewID;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvID;
 
         /// <summary>
-        /// ddlJobRoles control.
+        /// ddl_Course control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlJobRoles;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Course;
 
         /// <summary>
-        /// txtDutyTime control.
+        /// ButtonSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDutyTime;
+        protected global::System.Web.UI.WebControls.Button ButtonSave;
 
         /// <summary>
-        /// btnSaveSchedule control.
+        /// ButtonCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveSchedule;
+        protected global::System.Web.UI.WebControls.Button ButtonCancel;
+
+        /// <summary>
+        /// ButtonDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonDelete;
+
+        /// <summary>
+        /// lblStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStatus;
     }
 }

@@ -11,70 +11,52 @@ namespace Lab3
 {
 
 
-    public partial class CreateSchedule
+    public partial class AddDepart
     {
 
         /// <summary>
-        /// pnlMessage control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlMessage;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblErrorMessage control.
+        /// txtDepartmentId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
+        protected global::System.Web.UI.WebControls.TextBox txtDepartmentId;
 
         /// <summary>
-        /// txtFullName control.
+        /// txtDepartmentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFullName;
+        protected global::System.Web.UI.WebControls.TextBox txtDepartmentName;
 
         /// <summary>
-        /// ddlCrewID control.
+        /// txtDepartmentDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCrewID;
+        protected global::System.Web.UI.WebControls.TextBox txtDepartmentDescription;
 
         /// <summary>
-        /// ddlJobRoles control.
+        /// btnSaveDepartment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlJobRoles;
-
-        /// <summary>
-        /// txtDutyTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDutyTime;
-
-        /// <summary>
-        /// btnSaveSchedule control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveSchedule;
+        protected global::System.Web.UI.WebControls.Button btnSaveDepartment;
     }
 }

@@ -19,8 +19,9 @@
             <label for="txtFullName">Full Name:</label>
             <asp:TextBox ID="txtFullName" runat="server" CssClass="input" placeholder="Full Name" required></asp:TextBox>
 
-            <label for="txtCrewID">Crew ID:</label>
-            <asp:TextBox ID="txtCrewID" runat="server" CssClass="input" placeholder="Crew ID" required></asp:TextBox>
+            <label for="ddlCrewID">Crew ID:</label>
+            <asp:DropDownList ID="ddlCrewID" runat="server" CssClass="input" required></asp:DropDownList>
+
 
             <label for="ddlJobRoles">Department:</label>
             <asp:DropDownList ID="ddlJobRoles" runat="server" CssClass="input" required></asp:DropDownList>

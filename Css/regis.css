@@ -1,0 +1,99 @@
+﻿/* regis.css */
+
+body {
+    font-family: 'Galdeano-Regular', sans-serif;
+    background: rgb(0, 0, 0);
+    padding: 80px;
+    background-image: url('../images/ktm2.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    margin: 0 0 20px;
+    font-family: 'Galdeano-Regular', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    font-size: 24px;
+}
+
+    h2::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 2px;
+        background-color: #4b4276;
+        margin-top: 8px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+label {
+    size: 14px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    text-align: left;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4b4276;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.g-recaptcha {
+    margin: 10px 0;
+}
+
+.messageLabel {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4b4276;
+    font-weight: bold;
+}
+
+    .back-button:hover {
+        text-decoration: underline;
+        color: #693ead;
+    }
+
+p {
+    padding: 10px;
+    font: 400 16px 'Galdeano-Regular', sans-serif;
+    color: #100d1f;
+}
+
